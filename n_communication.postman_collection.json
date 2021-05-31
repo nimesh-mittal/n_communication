@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "6650f4fe-16b0-4aee-bf2a-c1c58dc78669",
+		"name": "n_communication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Send Communication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"channel\": \"sms\",\n    \"from\": \"+11122116112\",\n    \"to\": \"+918884888288\",\n    \"payload\": \"I will be there, thanks for the invite\",\n    \"title\": \"Hello, how are you?\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/comms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"comms"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
