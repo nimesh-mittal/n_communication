@@ -18,13 +18,13 @@ Service should provide following abilities
 ## Service SLA
 
 - Availability
-Communication service should target 99.99% uptime
+  - Communication service should target 99.99% uptime
 - Latency
-Communication service should aim for less than 10 ms P95 latency
+  - Communication service should aim for less than 10 ms P95 latency
 - Throughput
-Communication service should provide 5000 QPS per node
+  - Communication service should provide 5000 QPS per node
 - Freshness
-Communication service should be able to send messages in less than 2 mins. Please refere SLA of each channel below
+  - Communication service should be able to send messages in less than 2 mins. Please refere SLA of each channel below
 
 ## Architecture
 
@@ -114,20 +114,35 @@ This README file provides complete documentation. Link to any other documentatio
 ## Local Development Setup
 
 - Setup environment variables
-  * export AWS_REGION="ap-south-1"
-  * export AWS_SECRET_ID="<key here>"
-  * export AWS_SECRET="<secret here>"
-  * export TWILIO_ACCOUNT_SID="<AC....>"
-  * export TWILIO_AUTH_TOKEN="<token here>"
-  * export TWILIO_URL="< https://api.twilio.com/2010-04-01/Accounts/<account sid>/Messages.json >"
+  - export AWS_REGION="ap-south-1"
+  - export AWS_SECRET_ID="<key here>"
+  - export AWS_SECRET="<secret here>"
+  - export TWILIO_ACCOUNT_SID="<AC....>"
+  - export TWILIO_AUTH_TOKEN="<token here>"
+  - export TWILIO_URL="< https://api.twilio.com/2010-04-01/Accounts/<account sid>/Messages.json >"
 
 - Start service
-```go run main.go```
+
+```shell
+  go run main.go
+```
 
 - Run testcases with coverage
-```go test ./... -cover```
+
+```shell
+go test ./... -cover
+```
 
 - How to generate mocks in local
-```go get github.com/golang/mock/gomock```
-```go get github.com/golang/mock/mockgen```
-```<path to bin>/mockgen -destination=mocks/mock_profilerepo.go -package=mocks n_users/repo ProfileRepo```
+
+```shell
+  go get github.com/golang/mock/gomock
+```
+
+```shell
+  go get github.com/golang/mock/mockgen
+```
+
+```shell
+  <path to bin>/mockgen -destination=mocks/mock_profilerepo.go -package=mocks n_users/repo ProfileRepo
+```
