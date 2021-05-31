@@ -114,13 +114,12 @@ This README file provides complete documentation. Link to any other documentatio
 ## Local Development Setup
 
 - Setup environment variables
-export AWS_REGION="ap-south-1"
-export AWS_SECRET_ID="<key here>"
-export AWS_SECRET="<secret here>"
-
-export TWILIO_ACCOUNT_SID="<AC....>"
-export TWILIO_AUTH_TOKEN="<token here>"
-export TWILIO_URL="< https://api.twilio.com/2010-04-01/Accounts/<account sid>/Messages.json >"
+  * export AWS_REGION="ap-south-1"
+  * export AWS_SECRET_ID="<key here>"
+  * export AWS_SECRET="<secret here>"
+  * export TWILIO_ACCOUNT_SID="<AC....>"
+  * export TWILIO_AUTH_TOKEN="<token here>"
+  * export TWILIO_URL="< https://api.twilio.com/2010-04-01/Accounts/<account sid>/Messages.json >"
 
 - Start service
 ```go run main.go```
