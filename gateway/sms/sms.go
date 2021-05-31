@@ -68,8 +68,8 @@ func sendSMS(to string, from string, payload string) (bool, error) {
 
 		zap.L().Info("sms sent successfully", zap.Any("sid", data["sid"]))
 		return true, nil
-	} else {
-		zap.L().Info("error sending sms")
-		return false, errors.New("received http status " + resp.Status)
 	}
+
+	zap.L().Info("error sending sms")
+	return false, errors.New("received http status " + resp.Status)
 }
